@@ -1,0 +1,105 @@
+/*Changed titbar color Fri Jun  3 08:53:54 CST 2016 */
+@define-color header_border_line #11161D;
+@define-color header_face #31363D;
+
+@define-color tsingyi_side_bg_row #90E8F4;
+@define-color tsingyi_side_fg_row #333;
+
+@define-color tsingyi_fg #333;
+@define-color tsingyi_bg #fff;
+
+@define-color tsingyi_sel_bg #31363D;
+@define-color tsingyi_sel_fg #fff;
+
+@define-color tsingyi_shadow #eee;
+@define-color tsingyi_btn #fff;
+
+@define-color titlebar_color #fff;
+@define-color bg_highlight_color #fff;
+@define-color text_color #ff0000;
+@define-color fg_color #333;
+@define-color base_color #FFF;
+@define-color bg_color shade (@base_color, 0.96);
+@define-color insensitive_color mix(@text_color, @bg_color, 0.6);
+@define-color menu_separator alpha (#000, 0.15);
+@define-color menu_separator_shadow alpha (#fff, 0.8);
+@define-color inset_dark_color alpha (#000, 0.06);
+@define-color selected_bg_color #3d9bda;
+@define-color selected_fg_color #FFF;
+@define-color colorAccent @selected_bg_color;
+@define-color bg_highlight_color #fff;
+@define-color text_shadow_color alpha (#fff, 0.4);
+@define-color border_color alpha (#cccccc,0.5);
+
+
+/***********
+ * Sidebar左侧边栏 *
+ ***********/
+.sidebar,
+.sidebar .view,
+.sidebar GtkScrolledWindow {
+	background-color: /*@sidebar_bg*/#21363D;
+	font-weight:bold;
+	color:white;
+    /*font-family:FZXiangLi-S17S,regular;*/
+	box-shadow: 1px 2px 3px #333;
+	border-style:solid;
+	border-width:0 1px 0 0;
+	border-color:alpha (#eeeeee,0.6);
+}
+
+.sidebar .frame {
+	border-style:solid;
+	box-shadow: 1px 2px 3px #333;
+}
+.sidebar row {
+	background-color: #21262D;
+    /*font-family:FZXiangLi-S17S,regular;*/
+	color:white;
+	margin:5px 0px 5px 2px;
+	padding:5px 0px 5px 2px;
+	box-shadow:-1px 2px 3px #170430;
+}
+.sidebar row:hover {
+	/*background-color: shade (@theme_bg_color, 0.95);*/
+	background-color:@tsingyi_side_bg_row;
+	color:@tsingyi_side_fg_row;
+	box-shadow: -1px 4px 5px #2fd8f0;
+	margin:9px 0px 9px 0px;
+}
+
+.sidebar .scrollbar.trough {
+	box-shadow: none;
+	border-radius: 100px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: transparent;
+}
+
+.sidebar .scrollbar.trough {
+	background-color: /*@sidebar_scrollbar_trough*/transparent;
+}
+
+.sidebar .scrollbar.slider {
+	background-color: @sidebar_bg;
+}
+
+.sidebar .scrollbar.slider:hover {
+	background-color: mix (@sidebar_bg, @theme_base_color, 0.35);
+}
+
+.sidebar .scrollbar.slider:hover:active {
+	background-color: @theme_base_color;
+}
+
+.sidebar .radio,
+.sidebar .radio:focus,
+.sidebar .radio:selected {
+	/*background-image: none;*/
+	background-color:yellow;
+}
+.sidebar-icon {
+	color:#2eb398;
+	padding-right:10px;
+	margin-right:10px;
+}
